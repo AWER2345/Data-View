@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>US Execution Data</title>
+    <link rel="icon" href="data:;base64,iVBORwOKGO=" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container" style="justify-content: center; height: 500px; margin-bottom: 10px;">
+        <div class="chart-border">
+            <h1 id="mapTitle" style="margin-left: 20px;">US Map of Executions [1977 - 2023]</h1>
+            <div id="map"></div>
+        </div>
+
+        <div class="lineChart chart-border" style="margin-left: 10px;">
+            <h1 id="lineChartTitle" style="margin-left: 12px; margin-bottom: 55px"></h1>
+            <div id="lineChartVis"></div>
+            <input style="width: 726px; margin-left: 52.1px;" type="range" min="1977" value="2023" max="2023" id="slider">
+        </div>
+    </div>
+
+    <div class="container" style="justify-content: center;">
+        <div class="container chart-border">
+            <div>
+                <svg id="race-bar-chart"></svg>
+                <ul class="legend">
+                    <li><span class="legend-e white"></span> White</li>
+                    <li><span class="legend-e black"></span> Black</li>
+                    <li><span class="legend-e latino"></span> Latino</li>
+                    <li><span class="legend-e asian"></span> Asian</li>
+                    <li><span class="legend-e native"></span> Native</li>
+                    <li><span class="legend-e other"></span> Other Race</li>
+                </ul>
+            </div>
+        
+            <div>
+                <svg id="sex-bar-chart"></svg>
+                <ul class="legend">
+                    <li><span class="legend-e male"></span> Male</li>
+                    <li><span class="legend-e female"></span> Female</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container chart-border" style="margin-left: 10px;">
+            <div style="margin: auto; width: 50%;">
+                <div id="sex-pie-chart"></div>
+                <ul class="legend">
+                    <li><span class="legend-e male"></span> Male</li>
+                    <li><span class="legend-e female"></span> Female</li>
+                    <br>
+                </ul>
+            </div>
+            <div style="margin: auto; width: 50%;">
+                <div id="racePieChartVis"></div>
+                <ul class="legend">
+                    <li><span class="legend-e white"></span> White</li>
+                    <li><span class="legend-e black"></span> Black</li>
+                    <li><span class="legend-e latino"></span> Latino</li>
+                    <li><span class="legend-e asian"></span> Asian</li>
+                    <li><span class="legend-e native"></span> Native</li>
+                    <li><span class="legend-e other"></span> Other Race</li>
+                </ul>
+            </div>
+            <div style="margin: auto; width: 50%;">
+                <div id="piechart"></div>
+                <ul class="legend">
+                    <li><span class="legend-e adult"></span> Adult</li>
+                    <li><span class="legend-e juvenile"></span> Juvenile</li>
+                    <br>
+                </ul>
+            </div>
+        </div>
+    </div>
+      
+
+    <div id="tooltip"></div>
+
+    <script src="js/raceBarChart.js"></script>
+    <script src="js/sexBarChart.js"></script>
+    <script src="js/sexPieChart.js"></script>
+    <script src="js/lineChart.js"></script>
+    <script src="js/racePieChart.js"></script>
+    <script src="js/d3.v6.min.js"></script>
+    <script src="js/topojson.v3.js"></script>
+    <script src="js/choroplethMap.js"></script>
+    <script src="js/agePieChart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
